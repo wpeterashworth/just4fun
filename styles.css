@@ -24,3 +24,14 @@ header, a {
 header, a:hover {
     color: #DB4C40;
 }
+
+@media screen and (max-width: 900px) {
+    .hub-title {
+        font-size: 1.75em;
+    }
+
+    header, a {
+        font-size: 1em;
+        text-align: center;
+    }
+}
