@@ -6,13 +6,13 @@
     <link rel="stylesheet" href="styles.css">
     <title>Peter's Choices for Entertainment</title>
 </head>
-<header>
-    <h1 class="home-page-title">My Entertainment Choices Schedule</h1>
-    <a href="home_page.html">Home</a>
-    <a href="video_games.html">VideoGames</a>
-    <a href="books.html">Books</a>
-</header>
 <body>
+    <header>
+        <h1 class="home-page-title">My Entertainment Choices Schedule</h1>
+        <a href="home_page.html">Home</a>
+        <a href="video_games.html">VideoGames</a>
+        <a href="books.html">Books</a>
+    </header>
     <main>
         <button class="accordion">Monday</button>
             <div class="panel">
@@ -204,30 +204,30 @@
             </div>
         <p class="sundays">Sundays are an anything goes day, just FYI. </p>
     </main>
+    <footer>
+        <p>Written by W. Peter Ashworth</p>
+        <p>All rights reserved</p>
+        <p>Last Edited December 2023</p>
+    </footer>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+    
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                /* Toggle between adding and removing the "active" class,
+                to highlight the button that controls the panel */
+                this.classList.toggle("active");
+    
+                /* Toggle between hiding and showing the active panel */
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                panel.style.display = "none";
+                } else {
+                panel.style.display = "block";
+                }
+            });
+        }
+    </script>
 </body>
-<footer>
-    <p>Written by W. Peter Ashworth</p>
-    <p>All rights reserved</p>
-    <p>Last Edited December 2023</p>
-</footer>
-<script>
-    var acc = document.getElementsByClassName("accordion");
-    var i;
-
-    for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function() {
-            /* Toggle between adding and removing the "active" class,
-            to highlight the button that controls the panel */
-            this.classList.toggle("active");
-
-            /* Toggle between hiding and showing the active panel */
-            var panel = this.nextElementSibling;
-            if (panel.style.display === "block") {
-            panel.style.display = "none";
-            } else {
-            panel.style.display = "block";
-            }
-        });
-    }
-</script>
 </html>

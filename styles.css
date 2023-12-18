@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&family=Montserrat&family=Playfair+Display&family=Rubik+Doodle+Shadow&display=swap');
+
+
+.hub-title {
+    font-family: "Rubik Doodle Shadow", Karla, Monteserrat, sans-serif;
+    font-size: 2em;
+    color:#DB4C40;
+    text-align: center
+}
+
+body {
+    background-color: #E9FFF9
+}
+
+header, a {
+    text-decoration: none;
+    color: #47A8BD;
+    font-family: Karla, Monteserrat, sans-serif;
+    font-size: 2rem;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+header, a:hover {
+    color: #DB4C40;
+}
