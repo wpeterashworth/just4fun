@@ -49,6 +49,7 @@ body {
 .home-page-title {
     text-align: center;
     font-family: "Rubik Doodle Shadow", Karla, Monteserrat, sans-serif;
+    word-spacing: 10px;
 }
 
 .description {
@@ -145,5 +146,9 @@ body {
 
     .game-column-3 {
         grid-column: 1;
+    }
+
+    .home-page-title {
+        font-size: 1.5em;
     }
     }
