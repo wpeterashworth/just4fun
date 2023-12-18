@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&family=Montserrat&family=Playfair+Display&family=Rubik+Doodle+Shadow&display=swap');
+/* universal things */
+/* colors:
+moonstone - #47A8BD
+mint green - #E9FFF9
+powder blue - #94B0DA
+cool gray - #8F91A2
+atomic tangerine - #F7A072 
+vermillion - #DB4C40*/
+
+header {
+    border-style: ridge;
+    border-color: #8F91A2;
+    border-width: .5em;
+}
+
+header, a{
+    color: #47A8BD;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.5em;
+    padding-right: 25px;
+    padding-left: 25px;
+    font-family: Karla, Monteserrat, sans-serif
+}
+
+header, a:hover {
+    color: #DB4C40;
+    text-decoration: none;
+}
+
+footer{
+    border-style: ridge;
+    border-color: #8F91A2;
+    border-width: .5em;
+    font-size: 1.25em;
+    font-family: Karla, Monteserrat, sans-serif;
+    text-align: center;
+}
+
+body {
+    overflow-x:hidden;
+    background-color: #E9FFF9
+}
+
+
+/* stuff for home page  */
+
+.home-page-title {
+    text-align: center;
+    font-family: "Rubik Doodle Shadow", Karla, Monteserrat, sans-serif;
+}
+
+.description {
+    font-family: Karla, Monteserrat, sans-serif;
+    font-size: 1.5em;
+    margin: 25px;
+}
+
+.me {
+    font-size: 1.5em;
+    font-family: Karla, Monteserrat, sans-serif;
+    float: left;
+    align-self: center;
+    padding: 20px;
+}
+
+#myself {
+    padding: 20px;
+}
+
+/* stuff for video game page  */
+
+.sundays {
+    text-align: center;
+    font-size: 1.5em;
+    font-family: Karla, Monteserrat, sans-serif;
+}
+
+.game-columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-style: double;
+    border-width: .5em;
+    padding: 50px;
+}
+
+.game-column-1 {
+    grid-column: 1;
+}
+
+.game-column-2 {
+    grid-column: 2;
+}
+
+.game-column-3 {
+    grid-column: 3;
+}
+
+.sentence {
+    text-align: center;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+    background-color: #E9FFF9;
+    color: #47A8BD;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: center;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    font-size: 1.25em;
+    font-family: Karla, Montserrat, "Playfair Display", sans-serif;
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .accordion:hover {
+    background-color: #94B0DA;
+    color: #DB4C40
+  }
+  
+  /* Style the accordion panel. Note: hidden by default */
+  .panel {
+    padding: 0 18px;
+    font-size: 1.25em;
+    background-color: #E9FFF9;
+    display: none;
+    overflow: hidden;
+    font-family: Karla, Montserrat, "Playfair Display", sans-serif;
+  }
+
+
+/* @media screen and (max-width: 900px) {
+    #myself {
+        height: 400px;
+        align-self: center;
+    }
+
+    .description {
+        float: left;
+    }
+    } */

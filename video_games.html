@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Peter's Choices for Entertainment</title>
+</head>
+<header>
+    <h1 class="home-page-title">My Entertainment Choices Schedule</h1>
+    <a href="home_page.html">Home</a>
+    <a href="video_games.html">Video Games</a>
+    <a href="books.html">Books</a>
+</header>
+<body>
+    <main>
+        <button class="accordion">Monday</button>
+            <div class="panel">
+                <p class="sentence">These are the games that can be played on Mondays: </p>
+                <div class="game-columns">
+                    <div class="game-column-1">
+                        <p>1. Legend of Zelda Twilight Princess</p>
+                        <img src="images/twilight_princess_cover.jpg" alt="Twilight Princess Cover Art">
+                        <p>2. Final Fantasy XII</p>
+                        <img src="images/ffxii_cover.jpeg" alt="Final Fantasy 12 Cover Art">
+                        <p>3. Cross Code</p>
+                        <img src="images/cross_code_cover.jpg" alt="Cross Code PS4 Cover Art">
+                    </div>
+                    <div class="game-column-2">
+                        <p>4. Uncharted - The Nathan Drake Collection</p>
+                        <img src="images/uncharted_cover.jpeg" alt="Uncharted Cover Art">
+                        <p>5. Super Mario Galaxy</p>
+                        <img src="images/mario_galaxy_cover.jpeg" alt="Super Mario Galaxy Cover Art">
+                        <p>6. Super Paper Mario</p>
+                        <img src="images/super_paper_mario_cover.jpeg" alt="Super Paper Mario Cover Art">
+                    </div>
+                    <div class="game-column-3">
+                        <p>7. Thronefall</p>
+                        <img src="images/thronefall_cover.jpeg" alt="Thronefall Cover Art">
+                        <p>8. Slay the Spire</p>
+                        <img src="images/slay_the_spire_cover.jpeg" alt="Slay the Spire Cover Art">
+                        <p>9. One Step From Eden</p>
+                        <img src="images/one_step_cover.png" alt="One Step From Eden Cover Art">
+                    </div>
+                </div>
+            </div>
+        <button class="accordion">Tuesday</button>
+            <div class="panel">
+                <p class="sentence">These are the games that can be played on Tuesdays: </p>
+            </div>
+        <button class="accordion">Wednesday</button>
+            <div class="panel">
+                <p class="sentence">These are the games that can be played on Wednesdays: </p>
+            </div>
+        <button class="accordion">Thursday</button>
+            <div class="panel">
+                <p class="sentence">These are the games that can be played on Thursdays: </p>
+            </div>
+        <button class="accordion">Friday</button>
+            <div class="panel">
+                <p class="sentence">These are the games that can be played on Fridays: </p>
+            </div>
+        <button class="accordion">Saturday</button>
+            <div class="panel">
+                <p class="sentence">These are the games that can be played on Saturdays: </p>
+            </div>
+        <button class="accordion">Any Day</button>
+            <div class="panel">
+                <p class="sentence">These are the games that can be played on any day: </p>
+            </div>
+        <button class="accordion">iPhone Games</button>
+            <div class="panel">
+                <p class="sentence">These are all iPhone games, which also can be played any day of the week... unfortunately no pictures.</p>
+            </div>
+        <p class="sundays">Sundays are an anything goes day, just FYI. </p>
+    </main>
+</body>
+<footer>
+    <p>Written by W. Peter Ashworth</p>
+    <p>All rights reserved</p>
+    <p>Last Edited December 2023</p>
+</footer>
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            /* Toggle between adding and removing the "active" class,
+            to highlight the button that controls the panel */
+            this.classList.toggle("active");
+
+            /* Toggle between hiding and showing the active panel */
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+            panel.style.display = "none";
+            } else {
+            panel.style.display = "block";
+            }
+        });
+    }
+</script>
+</html>
