@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&family=Montserrat&family=Playfair+Display&family=Rubik+Doodle+Shadow&display=swap');
+
+body {
+    overflow-x:hidden;
+    background-color: #E9FFF9
+}
+
+header {
+    border-style: ridge;
+    border-color: #8F91A2;
+    border-width: .5em;
+}
+
+footer{
+    border-style: ridge;
+    border-color: #8F91A2;
+    border-width: .5em;
+    font-size: 1.25em;
+    font-family: Karla, Monteserrat, sans-serif;
+    text-align: center;
+}
+
+.blog-title {
+    text-align: center;
+    font-family: "Rubik Doodle Shadow", Karla, Monteserrat, sans-serif;
+    word-spacing: 10px;
+    color: #DB4C40
+}
+
+.intro {
+    font-family: Karla, Monteserrat, sans-serif;
+    text-align: center;
+}
+
+.review-1 {
+    text-align: center;
+    font-family: "Rubik Doodle Shadow", Karla, Monteserrat, sans-serif;
+    color: #DB4C40;
+}
+
+#review-1-details {
+    font-family: Karla, Monteserrat, sans-serif;
+    color: #47A8BD;
+}
