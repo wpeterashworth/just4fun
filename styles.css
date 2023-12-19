@@ -19,6 +19,8 @@ header, a {
     font-size: 2rem;
     margin-left: 50px;
     margin-right: 50px;
+    display: block;
+    padding: 25px;
 }
 
 header, a:hover {
