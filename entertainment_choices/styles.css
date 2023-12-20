@@ -60,12 +60,14 @@ body {
 .me {
     font-size: 1.5em;
     font-family: Karla, Monteserrat, sans-serif;
-    float: left;
     padding: 20px;
+    text-align: center;
 }
 
 #myself {
     padding: 20px;
+    margin: 0 auto;
+    display: block;
 }
 
 /* stuff for video game page  */
