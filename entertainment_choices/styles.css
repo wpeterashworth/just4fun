@@ -78,7 +78,7 @@ body {
     font-family: Karla, Monteserrat, sans-serif;
 }
 
-.game-columns {
+.game-columns, .book-columns {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     border-style: double;
@@ -86,15 +86,15 @@ body {
     padding: 50px;
 }
 
-.game-column-1 {
+.game-column-1, .book-column-1 {
     grid-column: 1;
 }
 
-.game-column-2 {
+.game-column-2, .book-column-2 {
     grid-column: 2;
 }
 
-.game-column-3 {
+.game-column-3, .book-column-3 {
     grid-column: 3;
 }
 
@@ -136,15 +136,15 @@ body {
 
 
 @media screen and (max-width: 900px) {
-    .game-columns {
+    .game-columns, .book-columns {
         grid-template-columns: 1fr;
     }
 
-    .game-column-2 {
+    .game-column-2, .book-column-2 {
         grid-column: 1;
     }
 
-    .game-column-3 {
+    .game-column-3, .book-column-3 {
         grid-column: 1;
     }
 
