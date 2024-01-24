@@ -134,6 +134,12 @@ body {
     font-family: Karla, Montserrat, "Playfair Display", sans-serif;
   }
 
+  /* stuff for game list page */
+
+  .game-list {
+    font-family: Karla, Montserrat, "Playfair Display", sans-serif;
+    font-size: 1.25em;
+  }
 
 @media screen and (max-width: 900px) {
     .game-columns, .book-columns {
