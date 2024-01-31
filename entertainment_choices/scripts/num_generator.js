@@ -1,6 +1,6 @@
-function getRandomInt(min = 1, max = 16) {
+function getRandomInt(min = 1, max = 17) {
     const minCeiled = Math.ceil(1);
-    const maxFloored = Math.floor(16);
+    const maxFloored = Math.floor(17);
     let randomInt = Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled); 
     displayInt(randomInt);
     return randomInt
