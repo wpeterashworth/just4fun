@@ -141,6 +141,15 @@ body {
     font-size: 1.25em;
   }
 
+  /* stuff for number generator  */
+
+  #enter {
+    padding: 10px;
+    color:#47A8BD;
+    margin: 50px;
+    font-size: 2em; 
+  }
+
 @media screen and (max-width: 900px) {
     .game-columns, .book-columns {
         grid-template-columns: 1fr;
