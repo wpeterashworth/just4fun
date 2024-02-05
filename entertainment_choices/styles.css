@@ -24,6 +24,10 @@ header, a{
     font-family: Karla, Monteserrat, sans-serif
 }
 
+a {
+    font-size: 1em;
+}
+
 header, a:hover {
     color: #DB4C40;
 }
