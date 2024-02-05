@@ -159,6 +159,9 @@ body {
         grid-template-columns: 1fr;
     }
 
+    a {
+        font-size: .75em;
+    }
     .game-column-2, .book-column-2 {
         grid-column: 1;
     }
