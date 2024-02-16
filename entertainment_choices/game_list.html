@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Peter's Choices for Entertainment</title>
+    <script src="scripts/game_filter.js" defer></script>
 </head>
 
 <body>
@@ -19,14 +20,28 @@
         <a href="https://docs.google.com/spreadsheets/d/1-icpr3JeXa36urMGiWUyRY2CPnYkfCDv9gaSYw-BiAw/edit?usp=sharing">Game Decision Sheet</a>
     </header>
     <main>
+        <div class="button">
+            <select id="filter" title="Choose a data filter.">
+                <option value="" disabled selected>Filter Games</option>
+                <option value="multi">Fun Multiplayer</option>
+                <option value="single">SinglePlayer Adventure</option>
+                <option value="uncommon">Uncommon Picks</option>
+                <option value="five_stars">Five Stars</option>
+                <option value="any">Any</option>
+              </select>
+        </div>
         <div class="game-list">
             <p class="sentence">Full List of Games: </p>
             <div class="game-columns">
                 <div class="game-column-1">
-                    <p>1. Legend of Zelda Twilight Princess</p>
-                    <img src="images/twilight_princess_cover.JPG" alt="Twilight Princess Cover Art">
-                    <p>2. Final Fantasy XII</p>
-                    <img src="images/ffxii_cover.jpeg" alt="Final Fantasy 12 Cover Art">
+                    <div class="singleplayer-game-1">
+                        <p>1. Legend of Zelda Twilight Princess</p>
+                        <img src="images/twilight_princess_cover.JPG" alt="Twilight Princess Cover Art">
+                    </div>
+                    <div class="singleplayer-game-2">
+                        <p>2. Final Fantasy XII</p>
+                        <img src="images/ffxii_cover.jpeg" alt="Final Fantasy 12 Cover Art">
+                    </div>
                     <p>3. Cross Code</p>
                     <img src="images/cross_code_cover.jpg" alt="Cross Code PS4 Cover Art">
                     <p>4. Final Fantasy X</p>
@@ -135,8 +150,10 @@
                     <img src="images/star_wars_battlefront.jpeg" alt="Star Wars Battlefront 2 PS2 Cover Art">
                     <p>54. Star Wars - Revenge of the Sith</p>
                     <img src="images/star_wars_episode_3.png" alt="Star Wars Revenge of the Sith PS2 Cover Art">
-                    <p>55. Dragon Ball Z Budokai Tenkaichi 3</p>
-                    <img src="images/dbz_bt3_cover.jpeg" alt="Dragon Ball Z Budokai Tenkaichi Three Cover Art">
+                    <div class="multiplayerGame">
+                        <p>55. Dragon Ball Z Budokai Tenkaichi 3</p>
+                        <img src="images/dbz_bt3_cover.jpeg" alt="Dragon Ball Z Budokai Tenkaichi Three Cover Art">
+                    </div>
                     <p>56. Dragon Ball Z Budokai 3</p>
                     <img src="images/dbz_budokai_3.jpeg" alt="Dragon Ball Z Budokai Three Cover Art">
                     <p>57. Fortune Street</p>
