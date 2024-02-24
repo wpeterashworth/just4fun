@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&family=Montserrat&family=Playfair+Display&family=Rubik+Doodle+Shadow&display=swap');
+/* universal things */
+/* colors:
+moonstone - #47A8BD
+mint green - #E9FFF9
+powder blue - #94B0DA
+cool gray - #8F91A2
+atomic tangerine - #F7A072 
+vermillion - #DB4C40*/
+
+header {
+    border-style: ridge;
+    border-color: #8F91A2;
+    border-width: .5em;
+}
+
+header, a{
+    color: #47A8BD;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.5em;
+    padding-right: 25px;
+    padding-left: 25px;
+    font-family: Karla, Monteserrat, sans-serif
+}
+
+a {
+    font-size: 1em;
+}
+
+header, a:hover {
+    color: #DB4C40;
+}
+
+footer{
+    border-style: ridge;
+    border-color: #8F91A2;
+    border-width: .5em;
+    font-size: 1.25em;
+    font-family: Karla, Monteserrat, sans-serif;
+    text-align: center;
+}
+
+body {
+    overflow-x:hidden;
+    background-color: #E9FFF9
+}
+
+
+.home-title {
+    text-align: center;
+    font-family: "Rubik Doodle Shadow", Karla, Monteserrat, sans-serif;
+    word-spacing: 10px;
+}
+
+.info {
+    font-family: Karla, Monteserrat, sans-serif;
+    font-size: 1.5em;
+    margin: 25px;
+}
+
+#heart-pieces-list, #bugs-list {
+    font-family: Karla, Monteserrat, sans-serif;
+    font-size: 1.5em;
+    margin: 25px;
+}
+
+#hide-or-show-list, #hide-or-show-bottles, #hide-or-show-bugs {
+    width: 200px;
+    font-size: 1.5em;
+    color:#47A8BD;
+    background-color: #E9FFF9;
+    margin: 50px;
+}
