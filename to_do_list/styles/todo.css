@@ -1,0 +1,30 @@
+:root {
+    --background-color: #F6F0ED;
+    --header-color: #7EA8BE;
+    --accent-color: #28536B;
+    --accent-color2: #BBB193;
+}
+
+body {
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: var(--background-color);
+}
+
+main {
+    margin: 50px;
+    background-color: var(--accent-color);
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+}
+
+button {
+    margin: 15px;
+}
+
+h1 {
+    color: var(--header-color);
+}
