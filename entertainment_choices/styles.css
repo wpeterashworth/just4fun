@@ -264,6 +264,10 @@ h1 {
         grid-column: 1;
     }
 
+    .game-column-4 {
+        grid-column: 1;
+    }
+
     .home-page-title {
         font-size: 1.5em;
     }
