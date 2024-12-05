@@ -1,0 +1,88 @@
+<!-- 6Xzh-bSqrJ4DvdClgIbW Lord of the Rings API key -->
+<!-- https://the-one-api.dev/documentation#3 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 230 - Web Frontend Development - 
+    Peter Ashworth - Final Project">
+    <meta name="author" content="Peter Ashworth">
+    <meta property="og:title" content="Peter Ashworth WDD230 Final Project">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://wpeterashworth.github.io/wdd230/images/hometown-photo.jpeg">
+    <meta property="og:url" content="https://wpeterashworth.github.io/wdd230/final/index.html">
+    <link rel="icon" href="images/favicon5.ico">
+    <title>Lord of the Rings Fan Page</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/dates.js" defer></script>
+    <script src="scripts/characters.js" defer></script>
+    <script src="scripts/movies.js" defer></script>
+    <script src="scripts/quotes.js" defer></script>
+    <script src="scripts/hamburger.js" defer></script>
+</head>
+
+<body>
+    <div id="content">
+        <header>
+            <h1>The Lord of the Rings Trilogy Information and Fan Page</h1>
+            <nav class="navMenu">
+                <button id="menu"> Menu</button>
+                <ul>
+                    <li><a href="works-cited.html">Works Cited Page</a></li>
+                </ul>
+
+            </nav>
+        </header>
+        <div class="hero">
+            <picture id="hero-image">
+                <source media="(min-width: 1100px)" srcset="images/lotr_wallpaper_2_large.webp">
+                <source media="(min-width: 800px)" srcset="images/lotr_wallpaper_2_medium.webp">
+                <source media="(min-width: 400px)" srcset="images/lotr_wallpaper_2.webp">
+                <img src="images/lotr_wallpaper_2.webp" alt="picture of gandalf heading to a castle">
+            </picture>
+        </div>
+        <main>
+            <section id="movie-info-section">
+                <h2 class="movie-heading">The Lord of the Rings Movie Trilogy Info</h2>
+                <div id="movie-info">
+                    <img src="images/fellowship_img.webp" alt="fellowship of the ring movie image" loading="lazy">
+                    <img src="images/twotowers_img.webp" alt="two towers movie image" loading="lazy">
+                    <img src="images/returnoftheking_img.webp" alt="return of the king movie image" loading="lazy">
+                </div>
+            </section>
+            <section id="movie-quotes-section">
+                <h2 class="quotes-heading">Best Quotes From the Lord of the Rings Movies</h2>
+                <div id="movie-quotes">
+                    <img src="images/gollum.webp" alt="gollum" loading="lazy">
+                    <img src="images/Bilbo_Baggins.webp" alt="bilbo" loading="lazy">
+                    <img src="images/Galadriel.webp" alt="Galadriel" loading="lazy">
+                    <img src="images/Frodo.webp" alt="Frodo" loading="lazy">
+                    <img src="images/Gandalf.webp" alt="Gandalf" loading="lazy">
+                    <img src="images/Faramir.webp" alt="Faramir" loading="lazy">
+                    <img src="images/arwen.webp" alt="Arwen" loading="lazy">
+                    <img src="images/eowyn.webp" alt="eowyn" loading="lazy">
+                    <img src="images/legolas.webp" alt="legolas" loading="lazy">
+                    <img src="images/aragorn.webp" alt="aragorn" loading="lazy">
+                    <img src="images/sam_frodo.webp" alt="Sam and Frodo" loading="lazy">
+                    <img src="images/legolas_gimli.webp" alt="Legolas and Gimli" loading="lazy">
+                </div>
+                <h2 class="character-heading">Some Well Known Characters</h2>
+                <div id="characters"></div>
+            </section>
+        </main>
+        <footer>
+            <p>Last Modified:</p>
+            <p id="lastModified"></p>
+            <p>W. Peter Ashworth | WDD230 Final Project </p>
+            <p id="date"></p>
+        </footer>
+    </div>
+</body>
+
+</html>
