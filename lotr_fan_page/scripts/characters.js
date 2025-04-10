@@ -1,4 +1,4 @@
-const charactersURL = "https://wpeterashworth.github.io/wdd230/final/data/characters.JSON"
+const charactersURL = "https://wpeterashworth.github.io/just4fun/lotr_fan_page/data/characters.JSON"
 const characters = document.querySelector("#characters")
 
 async function apiFetchCharacters() {

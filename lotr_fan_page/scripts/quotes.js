@@ -1,4 +1,4 @@
-const quotesURL = "https://wpeterashworth.github.io/wdd230/final/data/quotes.JSON"
+const quotesURL = "https://wpeterashworth.github.io/just4fun/lotr_fan_page/data/quotes.JSON"
 const quotes = document.querySelector("#movie-quotes")
 
 async function apiFetchQuotes() {

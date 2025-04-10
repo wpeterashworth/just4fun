@@ -1,4 +1,4 @@
-const moviesURL = "https://wpeterashworth.github.io/wdd230/final/data/movies.JSON"
+const moviesURL = "https://wpeterashworth.github.io/just4fun/lotr_fan_page/data/movies.JSON"
 const movieInfo = document.querySelector("#movie-info")
 
 async function apiFetchMovies() {
