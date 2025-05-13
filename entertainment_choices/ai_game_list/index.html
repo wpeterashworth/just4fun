@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Picker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Game Picker</h1>
+            <p>Find your next game to play!</p>
+        </header>
+        
+        <div class="filters">
+            <div class="filter-group">
+                <label for="genre-filter">Genre:</label>
+                <select id="genre-filter">
+                    <option value="all">All Genres</option>
+                    <!-- Will be populated via JavaScript -->
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="mood-filter">Mood:</label>
+                <select id="mood-filter">
+                    <option value="all">Any Mood</option>
+                    <!-- Will be populated via JavaScript -->
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="num-games">Number of games:</label>
+                <input type="number" id="num-games" min="1" max="10" value="5">
+            </div>
+        </div>
+
+        <button id="generate-btn">Generate Game List</button>
+        
+        <div class="results">
+            <h2>Your Personalized Game List</h2>
+            <div id="games-container" class="games-grid">
+                <!-- Games will be inserted here -->
+                <div class="empty-state">
+                    Click "Generate Game List" to get started!
+                </div>
+            </div>
+        </div>
+
+        <div class="game-management">
+            <h2>Manage Your Game Library</h2>
+            <p>Add your games here. Each game needs a name, genre, mood, and image URL.</p>
+            
+            <form id="add-game-form">
+                <div class="form-group">
+                    <label for="game-name">Game Name:</label>
+                    <input type="text" id="game-name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="game-genre">Genre:</label>
+                    <input type="text" id="game-genre" required placeholder="e.g. RPG, Action, Platformer">
+                </div>
+                
+                <div class="form-group">
+                    <label for="game-mood">Mood:</label>
+                    <input type="text" id="game-mood" required placeholder="e.g. Chill, Intense, Story-focused">
+                </div>
+                
+                <div class="form-group">
+                    <label for="game-image">Image URL:</label>
+                    <input type="text" id="game-image" required placeholder="URL to box art image">
+                </div>
+                
+                <button type="submit">Add Game</button>
+            </form>
+            
+            <div class="library-controls">
+                <button id="show-library-btn">Show Full Library</button>
+                <button id="clear-library-btn">Clear Library</button>
+                <button id="load-sample-btn">Load Sample Games</button>
+            </div>
+            
+            <div id="library-display" class="hidden">
+                <h3>Your Game Library</h3>
+                <div id="library-container"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Game Picker | Created with ❤️ for game enthusiasts</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

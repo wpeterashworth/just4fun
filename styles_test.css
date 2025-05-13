@@ -1,0 +1,15 @@
+fieldset:nth-child(1) {
+    font-size: 3rem;
+}
+
+input:required:invalid {
+    background-color: red;
+}
+
+label + input{
+    color: blue;
+}
+
+fieldset:nth-of-type(3) p {
+    display: none;
+}
