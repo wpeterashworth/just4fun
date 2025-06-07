@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+:root {
+  --accent-color1: #ABA361;
+  --accent-color2: #994636;
+  --background-color: #F4D58D;
+  --header-color: #62929E;
+  --text-color1: black;
+  --text-color2: white;
+}
+
+$font-stack: merriweather, lato, sans-serif;
+$border-style: ridge;
+$border-radius: 5px;
+$standard-padding: 20px;
+$large-padding: 25px;
+$small-padding: 15px;
+$tiny-padding: 5px;
+$border-width-standard: 6px;
+$border-width-large: 10px;
+$margin-standard: 20px;
+$margin-small: 15px;
+$max-button-width: 200px;
+$button-width: 50%;
+
+
+@mixin border-style($width: $border-width-standard, $color: var(--accent-color1)) {
+  border: $border-style;
+  border-width: $width;
+  border-radius: $border-radius;
+  border-color: $color;
+}
+
+@mixin center-block {
+  margin: 0 auto;
+  display: block;
+}
+
+@mixin grid-row-order($start: 1, $end: 12) {
+  @for $i from $start through $end {
+    &:nth-child(#{$i}) {
+      grid-row: $i;
+    }
+  }
+}
+
+@mixin quote-row-pairing($count: 12) {
+  @for $i from 1 through $count {
+    p:nth-child(#{$i}),
+    img:nth-child(#{$i}) {
+      grid-row: $i;
+    }
+  }
+}
+
+@mixin button-style($bg-color: var(--accent-color1)) {
+  cursor: pointer;
+  background-color: $bg-color;
+  color: var(--black);
+  font-size: 16px;
+  border-radius: 7px;
+  border: outset;
+  background-image: linear-gradient(#eee, #fff);
+  width: $button-width;
+  font-weight: bold;
+  @include center-block;
+  margin-bottom: $margin-standard;
+  max-width: $max-button-width;
+  padding: $tiny-padding;
+}
+
+#content {
+  font-family: $font-stack;
+  background-color: var(--background-color);
+  color: var(--text-color1);
+  overflow-x: hidden;
+}
+
+#movie-info {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
+  text-align: center;
+  background-color: var(--accent-color2);
+  padding: $standard-padding;
+  
+  p {
+    padding: $small-padding;
+    background-color: var(--background-color);
+    @include border-style();
+    margin: $small-padding;
+    
+    &:nth-child(1) { grid-row: 1; }
+    &:nth-child(2) { grid-row: 3; }
+    &:nth-child(3) { grid-row: 5; }
+  }
+  
+  img {
+    @include center-block;
+    
+    &:nth-child(1) { grid-row: 2; }
+    &:nth-child(2) { grid-row: 4; }
+    &:nth-child(3) { grid-row: 6; }
+  }
+}
+
+#movie-quotes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 50%));
+  grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+  background-color: var(--accent-color1);
+  
+  @include quote-row-pairing(12);
+  
+  p {
+    grid-column: 1;
+    padding: $large-padding;
+    background-color: var(--background-color);
+    @include border-style($color: var(--accent-color2));
+    align-self: center;
+    margin-left: $standard-padding;
+  }
+  
+  img {
+    grid-column: 2;
+    padding: $standard-padding;
+    max-width: 80%;
+    @include center-block;
+  }
+}
+
+main h2 {
+  text-align: center;
+  padding: $standard-padding;
+  color: var(--text-color2);
+  background-image: url(../images/lotr_wallpaper_1.jpg);
+  margin: 0;
+}
+
+#characters p {
+  text-align: center;
+  padding: $standard-padding;
+  @include border-style();
+  font-weight: bold;
+  margin: $margin-standard;
+  background-color: var(--header-color);
+}
+
+footer,
+header {
+  text-align: center;
+  border: $border-style;
+  color: var(--white);
+  border-color: var(--accent-color1);
+  border-width: $border-width-standard;
+  background-color: var(--header-color);
+}
+
+nav {
+  ul {
+    padding-inline-start: 0px;
+    list-style-type: none;
+    display: none;
+    
+    &.open {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--black);
+    cursor: pointer;
+    outline: none;
+    font-weight: bold;
+    font-size: .9em;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+#menu {
+  @include button-style();
+  
+  &:hover {
+    background-color: var(--accent-color3);
+    background-image: linear-gradient(#bbb, #ccc);
+  }
+  
+  &::before {
+    content: "Open";
+  }
+  
+  &.open::before {
+    content: "Close";
+  }
+}
+
+#hero-image {
+  @include center-block;
+  margin-top: $standard-padding;
+  @include border-style($width: $border-width-large);
+  padding: 10px 15px 15px 15px;
+  background-color: var(--accent-color2);
+  max-width: auto-fit;
+}
+
+.hero {
+  display: grid;
+  margin-bottom: $margin-small;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color1);
+  
+  &:hover {
+    text-decoration: underline;
+  }
+}
