@@ -1,0 +1,97 @@
+$breakpoint-large: 1000px;
+$grid-min-height: 100px;
+$grid-min-width: 200px;
+$quotes-min-height: 150px;
+$characters-min-height: 150px;
+$standard-padding: 20px;
+$large-padding: 55px;
+$max-width-percentage: 80%;
+$bottom-margin: 20px;
+
+@mixin grid-template($type, $size, $min-size) {
+  grid-template-#{$type}: repeat(auto-fit, minmax($min-size, $size));
+}
+
+@mixin grid-position($column: null, $row: null) {
+  @if $column { grid-column: $column; }
+  @if $row { grid-row: $row; }
+}
+
+@mixin character-order($child, $row) {
+  &:nth-child(#{$child}) {
+    grid-row: $row;
+  }
+}
+
+@media screen and (min-width: $breakpoint-large) {
+  #movie-info {
+    @include grid-template(rows, 1fr, $grid-min-height);
+    
+    img {
+      @include grid-position($column: 2);
+      padding: $standard-padding;
+      
+      @include character-order(1, 1);
+      @include character-order(2, 2);
+      @include character-order(3, 3);
+    }
+    
+    p {
+      @include grid-position($column: 1);
+      max-width: $max-width-percentage;
+      margin: $large-padding;
+    }
+  }
+
+  #movie-quotes-section {
+    display: grid;
+    @include grid-template(columns, 1fr, $grid-min-width);
+    @include grid-template(rows, 1fr, $quotes-min-height);
+  }
+
+  .movie-heading {
+    padding: $large-padding;
+  }
+
+  .quotes-heading {
+    @include grid-position($column: 1/5, $row: 1);
+    align-content: center;
+  }
+
+  .character-heading {
+    display: none;
+  }
+
+  #movie-quotes {
+    @include grid-position($column: 1/3, $row: 2);
+  }
+
+  #characters {
+    @include grid-position($column: 3/5, $row: 2);
+    background-color: var(--accent-color1);
+    display: grid;
+    @include grid-template(rows, 1fr, $characters-min-height);
+    
+    p {
+      margin-left: 0;
+      margin-bottom: 0;
+      
+      @include character-order(10, 1);
+      @include character-order(3, 2);
+      @include character-order(7, 3);
+      @include character-order(6, 4);
+      @include character-order(8, 5);
+      @include character-order(5, 6);
+      @include character-order(2, 7);
+      @include character-order(4, 8);
+      @include character-order(11, 9);
+      @include character-order(1, 10);
+      @include character-order(12, 11);
+      
+      &:nth-child(9) {
+        grid-row: 12;
+        margin-bottom: $bottom-margin;
+      }
+    }
+  }
+}
